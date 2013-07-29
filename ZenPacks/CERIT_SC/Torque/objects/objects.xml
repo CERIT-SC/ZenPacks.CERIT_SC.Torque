@@ -469,16 +469,16 @@ True
 3
 </property>
 <property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
-LINE
+AREA
 </property>
 <property type="long" id="lineWidth" mode="w" >
 1
 </property>
 <property type="boolean" id="stacked" mode="w" >
-False
+True
 </property>
 <property type="string" id="format" mode="w" >
-%5.2lf%s
+%5.0lf%s
 </property>
 <property type="string" id="legend" mode="w" >
 ${graphPoint/id}
@@ -498,16 +498,16 @@ AVERAGE
 0
 </property>
 <property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
-LINE
+AREA
 </property>
 <property type="long" id="lineWidth" mode="w" >
 1
 </property>
 <property type="boolean" id="stacked" mode="w" >
-False
+True
 </property>
 <property type="string" id="format" mode="w" >
-%5.2lf%s
+%5.0lf%s
 </property>
 <property type="string" id="legend" mode="w" >
 ${graphPoint/id}
@@ -527,16 +527,16 @@ AVERAGE
 1
 </property>
 <property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
-LINE
+AREA
 </property>
 <property type="long" id="lineWidth" mode="w" >
 1
 </property>
 <property type="boolean" id="stacked" mode="w" >
-False
+True
 </property>
 <property type="string" id="format" mode="w" >
-%5.2lf%s
+%5.0lf%s
 </property>
 <property type="string" id="legend" mode="w" >
 ${graphPoint/id}
@@ -556,16 +556,16 @@ AVERAGE
 4
 </property>
 <property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
-LINE
+AREA
 </property>
 <property type="long" id="lineWidth" mode="w" >
 1
 </property>
 <property type="boolean" id="stacked" mode="w" >
-False
+True
 </property>
 <property type="string" id="format" mode="w" >
-%5.2lf%s
+%5.0lf%s
 </property>
 <property type="string" id="legend" mode="w" >
 ${graphPoint/id}
@@ -585,16 +585,16 @@ AVERAGE
 2
 </property>
 <property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
-LINE
+AREA
 </property>
 <property type="long" id="lineWidth" mode="w" >
 1
 </property>
 <property type="boolean" id="stacked" mode="w" >
-False
+True
 </property>
 <property type="string" id="format" mode="w" >
-%5.2lf%s
+%5.0lf%s
 </property>
 <property type="string" id="legend" mode="w" >
 ${graphPoint/id}
