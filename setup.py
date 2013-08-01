@@ -8,7 +8,7 @@ AUTHOR = "CERIT Scientific Cloud"
 LICENSE = ""
 NAMESPACE_PACKAGES = ['ZenPacks', 'ZenPacks.CERIT_SC']
 PACKAGES = ['ZenPacks', 'ZenPacks.CERIT_SC', 'ZenPacks.CERIT_SC.Torque']
-INSTALL_REQUIRES = []
+INSTALL_REQUIRES = ['ZenPacks.community.deviceAdvDetail']
 COMPAT_ZENOSS_VERS = ""
 PREV_ZENPACK_NAME = ""
 # STOP_REPLACEMENTS

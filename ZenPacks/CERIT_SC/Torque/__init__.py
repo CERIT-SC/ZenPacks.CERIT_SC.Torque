@@ -14,7 +14,7 @@ from Products.ZenModel.Device import Device
 
 Device._relations += (
     ('torqueNodes', ToManyCont(ToOne,
-     'ZenPacks.CERIT_SC.Torque.TorqueNode','torqueNodeDevice')),
+     'ZenPacks.CERIT_SC.Torque.TorqueNode','torqueDevice')),
 )
 
 unused(Globals)
