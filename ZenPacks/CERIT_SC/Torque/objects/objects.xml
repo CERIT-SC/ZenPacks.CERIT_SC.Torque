@@ -20,7 +20,7 @@ True
 3
 </property>
 <property type="string" id="commandTemplate" mode="w" >
-/usr/bin/pbsnodes.bin -l all | awk 'BEGIN { s["down"]=0; s["free"]=0; s["job-exclusive"]=0; s["offline"]=0; s["other"]=0; } /offline/ { s["offline"]++; next } { if ($$2 in s) { s[$$2]++ } else { s["other"]++ } } END { for (i in s) printf("%s:%i ",i,s[i]); print "" }'
+/usr/bin/pbsnodes.bin -l all | awk 'BEGIN { s["down"]=0; s["free"]=0; s["job-exclusive"]=0; s["offline"]=0; s["other"]=0; } /offline/ { s["offline"]++; next } /down/ { s["down"]++; next } /job-exclusive/ { s["job-exclusive"]++; next } /free/ { s["free"]++; next } { s["other"]++ } END { for (i in s) printf("%s:%i ",i,s[i]); print "" }'
 </property>
 <property type="int" id="cycletime" mode="w" >
 300
