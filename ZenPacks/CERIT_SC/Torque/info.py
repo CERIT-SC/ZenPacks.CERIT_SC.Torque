@@ -34,6 +34,10 @@ class TorqueNodeInfo(ComponentInfo):
         return self._object.np
 
     @property
+    def priority(self):
+        return self._object.priority
+
+    @property
     def note(self):
         return self._object.note
 

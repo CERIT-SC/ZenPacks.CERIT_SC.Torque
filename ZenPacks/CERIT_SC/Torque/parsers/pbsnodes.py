@@ -48,10 +48,12 @@ class pbsnodes(CommandParser):
                     if dp is not None:
                         try:
                             value=p.firstChild.data
-                            match=re.match('^(?P<value>[\d\.]+)(?P<unit>kb|mb|gb)',value)
+                            match=re.match('^(?P<value>[\d\.]+)(?P<unit>b|kb|mb|gb)',value)
                             if match:
                                 value = float(match.group('value'))
-                                if match.group('unit') == 'kb':
+                                if match.group('unit') == 'b':
+                                    pass
+                                elif match.group('unit') == 'kb':
                                     value *= 1024
                                 elif match.group('unit') == 'mb':
                                     value *= 1048576
@@ -63,21 +65,22 @@ class pbsnodes(CommandParser):
                                 value = value.lower()
                                 if 'offline' in value:
                                     value = 3
-                                elif value == 'free':
-                                    value = 2
-                                elif value == 'down':
+                                elif 'down' in value:
                                     value = 4
-                                elif value == 'reserve':
-                                    value = 5
-                                elif value == 'job-exclusive':
-                                    value = 6
-                                elif value == 'job-sharing':
-                                    value = 7
-                                elif value == 'busy':
-                                    value = 8
-                                elif value == 'frozen':
+                                elif 'frozen' in value:
                                     value = 9
-                                elif value == 'time-shared':
+
+                                elif 'free' in value:
+                                    value = 2
+                                elif 'reserve' in value:
+                                    value = 5
+                                elif 'job-exclusive' in value:
+                                    value = 6
+                                elif 'job-sharing' in value:
+                                    value = 7
+                                elif 'busy' in value:
+                                    value = 8
+                                elif 'time-shared' in value:
                                     value = 10
                                 else:
                                     value = 1

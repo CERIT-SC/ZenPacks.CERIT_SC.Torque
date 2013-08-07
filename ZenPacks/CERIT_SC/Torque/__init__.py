@@ -23,6 +23,10 @@ class ZenPack(ZenPackBase):
     def install(self, dmd):
         ZenPackBase.install(self, dmd)
         o = dmd.Devices.createOrganizer('/Server/SSH/Linux/Torque')
+#        o.setZenProperty( #+stavajici
+#            'zCollectorPlugins',[
+#                'CERIT_SC.cmd.pbsnodes'])
+
         for d in self.dmd.Devices.getSubDevices():
             d.buildRelations()
 

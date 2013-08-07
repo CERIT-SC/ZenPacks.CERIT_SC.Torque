@@ -17,7 +17,7 @@ class TorqueNode(DeviceComponent, ManagedEntity, HWStatus):
     priority   = 0
     note       = ''
     queue      = ''
-    properties = ''
+    properties = []
     status     = 1
 
     statusmap = {
@@ -39,7 +39,7 @@ class TorqueNode(DeviceComponent, ManagedEntity, HWStatus):
         {'id':'priority',   'type':'int',       'mode':'w'},
         {'id':'note',       'type':'string',    'mode':'w'},
         {'id':'queue',      'type':'string',    'mode':'w'},
-        {'id':'properties', 'type':'string',    'mode':'w'},
+        {'id':'properties', 'type':'lines',     'mode':'w'},
         {'id':'status',     'type':'int',       'mode':'w'},
     )
 

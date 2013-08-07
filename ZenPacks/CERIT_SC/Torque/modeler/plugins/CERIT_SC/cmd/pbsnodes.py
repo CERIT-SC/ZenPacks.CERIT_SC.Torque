@@ -33,7 +33,7 @@ class pbsnodes(CommandPlugin):
             om.priority = int(self.xmlData(n,'node_priority','0'))
             om.note = self.xmlData(n,'note','')
             om.queue = self.xmlData(n,'queue','')
-            om.properties = self.xmlData(n,'properties')
+            om.properties = str(self.xmlData(n,'properties','')).split(',')
             rm.append(om)
         log.info(rm)
         return rm

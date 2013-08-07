@@ -4,7 +4,7 @@
 # NB: PACKAGES is deprecated
 NAME = "ZenPacks.CERIT_SC.Torque"
 VERSION = "1.0.0"
-AUTHOR = "CERIT Scientific Cloud"
+AUTHOR = "CERIT Scientific Cloud <support@cerit-sc.cz>"
 LICENSE = ""
 NAMESPACE_PACKAGES = ['ZenPacks', 'ZenPacks.CERIT_SC']
 PACKAGES = ['ZenPacks', 'ZenPacks.CERIT_SC', 'ZenPacks.CERIT_SC.Torque']

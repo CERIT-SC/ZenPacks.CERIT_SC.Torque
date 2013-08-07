@@ -19,8 +19,8 @@ class ITorqueNodeInfo(IComponentInfo):
     """
     status = schema.Text(title=u"Status", group="Overview", readonly=True)
     operStatus = schema.Text(title=u"Operational Status", group="Overview", readonly=True)
-    np = schema.Int(title=u"Processors", group="Overview", readonly=True)
-    priority = schema.Int(title=u"Priority", group="Overview", readonly=True)
-    note = schema.Text(title=u"Note", group="Overview", readonly=True)
-    queue = schema.Text(title=u"Queue", group="Overview", readonly=True)
-    properties = schema.Text(title=u"Properties", group="Overview", readonly=True)
+    np = schema.Int(title=u"Processors", group="Details", readonly=True)
+    priority = schema.Int(title=u"Priority", group="Details", readonly=True)
+    note = schema.Text(title=u"Note", group="Details", readonly=True)
+    queue = schema.Text(title=u"Queue", group="Details", readonly=True)
+    properties = schema.List(title=u"Properties", group="Details", readonly=True)
