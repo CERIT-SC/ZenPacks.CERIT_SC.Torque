@@ -8,10 +8,17 @@ system.
 
 ## Installation
 
-Requirements:
+Requirements server:
 
 * Zenoss 4.0 or later
 * [Advanced Device Details ZenPack](http://wiki.zenoss.org/ZenPack:Advanced_Device_Details)
+
+Requirements hosts:
+
+* [Torque](https://github.com/CESNET/torque) with commands:
+ * `pbsnodes`
+ * `/usr/bin/pbsnodes.bin`
+ * `/usr/bin/qstat.bin`
 
 ### Normal Installation (packaged egg)
 
@@ -23,7 +30,13 @@ No prebuilt packages yet.
     zenpack --link --install ZenPacks.CERIT_SC.Torque
     zenoss restart
 
-## Usage
+## Configuration
+
+Following modelers are available:
+
+* `CERIT_SC.cmd.pbsnodes`
+
+Binded on device class `/Server/SSH/Linux/Torque`.
 
 ## Screenshots
 
