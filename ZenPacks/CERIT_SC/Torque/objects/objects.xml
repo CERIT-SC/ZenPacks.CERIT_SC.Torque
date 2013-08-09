@@ -977,4 +977,107 @@ AVERAGE
 <!-- ('', 'zport', 'dmd', 'Events', 'App', 'Torque') -->
 <object id='/zport/dmd/Events/App/Torque' module='Products.ZenEvents.EventClass' class='EventClass'>
 </object>
+<!-- ('', 'zport', 'dmd', 'Processes', 'Torque') -->
+<object id='/zport/dmd/Processes/Torque' module='Products.ZenModel.OSProcessOrganizer' class='OSProcessOrganizer'>
+<property id='zendoc' type='string'>
+Torque resource manager
+</property>
+<property type="text" id="description" mode="w" >
+Torque resource manager
+</property>
+<tomanycont id='osProcessClasses'>
+<object id='pbs_cache' module='Products.ZenModel.OSProcessClass' class='OSProcessClass'>
+<property id='zendoc' type='string'>
+Torque cache
+</property>
+<property type="string" id="name" mode="w" >
+pbs_cache
+</property>
+<property type="string" id="regex" mode="w" >
+^/usr/sbin/pbs_cache
+</property>
+<property type="boolean" id="ignoreParametersWhenModeling" mode="w" >
+False
+</property>
+<property type="boolean" id="ignoreParameters" mode="w" >
+False
+</property>
+<property type="text" id="description" mode="w" >
+Torque cache
+</property>
+<property type="int" id="sequence" mode="w" >
+1
+</property>
+</object>
+<object id='pbs_mom' module='Products.ZenModel.OSProcessClass' class='OSProcessClass'>
+<property id='zendoc' type='string'>
+Torque batch execution mini-server
+</property>
+<property type="string" id="name" mode="w" >
+pbs_mom
+</property>
+<property type="string" id="regex" mode="w" >
+^/usr/sbin/pbs_mom
+</property>
+<property type="boolean" id="ignoreParametersWhenModeling" mode="w" >
+False
+</property>
+<property type="boolean" id="ignoreParameters" mode="w" >
+False
+</property>
+<property type="text" id="description" mode="w" >
+Torque batch execution mini-server
+</property>
+<property type="int" id="sequence" mode="w" >
+2
+</property>
+</object>
+<object id='pbs_sched' module='Products.ZenModel.OSProcessClass' class='OSProcessClass'>
+<property id='zendoc' type='string'>
+Torque scheduler
+</property>
+<property type="string" id="name" mode="w" >
+pbs_sched
+</property>
+<property type="string" id="regex" mode="w" >
+^/usr/sbin/pbs_sched
+</property>
+<property type="boolean" id="ignoreParametersWhenModeling" mode="w" >
+False
+</property>
+<property type="boolean" id="ignoreParameters" mode="w" >
+False
+</property>
+<property type="text" id="description" mode="w" >
+Torque scheduler
+</property>
+<property type="int" id="sequence" mode="w" >
+3
+</property>
+</object>
+<object id='pbs_server' module='Products.ZenModel.OSProcessClass' class='OSProcessClass'>
+<property id='zendoc' type='string'>
+Torque server
+</property>
+<property type="string" id="name" mode="w" >
+pbs_server
+</property>
+<property type="string" id="regex" mode="w" >
+^/usr/sbin/pbs_server
+</property>
+<property type="boolean" id="ignoreParametersWhenModeling" mode="w" >
+False
+</property>
+<property type="boolean" id="ignoreParameters" mode="w" >
+False
+</property>
+<property type="text" id="description" mode="w" >
+Torque server
+</property>
+<property type="int" id="sequence" mode="w" >
+4
+</property>
+</object>
+</tomanycont>
+</object>
 </objects>
