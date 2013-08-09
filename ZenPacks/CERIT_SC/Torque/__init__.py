@@ -22,16 +22,18 @@ unused(Globals)
 class ZenPack(ZenPackBase):
     def install(self, dmd):
         ZenPackBase.install(self, dmd)
-        o = dmd.Devices.createOrganizer('/Server/SSH/Linux/Torque')
-#        o.setZenProperty( #+stavajici
-#            'zCollectorPlugins',[
-#                'CERIT_SC.cmd.pbsnodes'])
+        torque = dmd.Devices.createOrganizer('/Server/SSH/Linux/Torque')
 
-        for d in self.dmd.Devices.getSubDevices():
-            d.buildRelations()
+        # add our modeler
+        collectors = torque.getProperty('zCollectorPlugins') or []
+        torque.setZenProperty('zCollectorPlugins',
+            collectors+['CERIT_SC.cmd.pbsnodes'])
+
+        for device in self.dmd.Devices.getSubDevices():
+            ddevice.buildRelations()
 
     def remove(self, dmd, leaveObjects=False):
         ZenPackBase.remove(self, dmd, leaveObjects=leaveObjects)
         Device._relations = tuple([x for x in Device._relations if x[0] not in ('torqueNodes')])
-        for d in self.dmd.Devices.getSubDevices():
-            d.buildRelations()
+        for device in self.dmd.Devices.getSubDevices():
+            device.buildRelations()
