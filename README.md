@@ -27,10 +27,6 @@ No prebuilt packages yet.
 
 ## Screenshots
 
-* Device overview
-
-![Overview](https://raw.github.com/CERIT-SC/ZenPacks.CERIT_SC.Torque/master/screenshots/overview.png)
-
 * Torque nodes
 
 ![Torque nodes](https://raw.github.com/CERIT-SC/ZenPacks.CERIT_SC.Torque/master/screenshots/nodes.png)
@@ -38,3 +34,7 @@ No prebuilt packages yet.
 * Torque node detail
 
 ![Detail](https://raw.github.com/CERIT-SC/ZenPacks.CERIT_SC.Torque/master/screenshots/detail.png)
+
+* Device overview
+
+![Overview](https://raw.github.com/CERIT-SC/ZenPacks.CERIT_SC.Torque/master/screenshots/overview.png)
